@@ -1,0 +1,141 @@
+.container {
+    width: 100%;
+}
+
+.container img {
+    height: 4vh;
+    cursor: pointer;
+}
+
+.navbar-mobile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: black;
+    color: #fff;
+}
+
+#burger-icon {
+    height: 60px;
+}
+
+.navbar-mobile-list {
+    background-color: black;
+    position: absolute;
+    top: 60px; 
+    width: 100%;
+    left: 0;
+    z-index: 10;
+    overflow: hidden; 
+    max-height: 0; 
+    transition: max-height 0.3s ease; 
+}
+
+.navbar-mobile-list.open {
+    max-height: 500px; 
+}
+
+.navbar-mobile-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-mobile-list li {
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.mobile-button-join {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.mobile-button-join button {
+    background-color: #f9ac54;
+    color: #fff;
+    border: none;
+    padding: 13px 21px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-button-join button:hover {
+    background-color: #e6a34b;
+}
+
+.navbar-container {
+    display: none; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+}
+
+.navbar-container .navbar-list {
+    display: flex;
+}
+
+.navbar-container .navbar-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar-container .navbar-list li {
+    margin: 0 15px;
+    cursor: pointer;
+    position: relative; 
+}
+
+.navbar-container .navbar-list li::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: transparent;
+    transition: width 0.3s ease; 
+    width: 0; 
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+}
+
+.navbar-container .navbar-list li:hover::after {
+    background: #f9ac54; 
+    width: 100%; 
+}
+
+.join-button button {
+    background-color: #f9ac54;
+    color: #fff;
+    border: none;
+    padding: 13px 24px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; 
+}
+
+.join-button button:hover {
+    background-color: #e6a34b; 
+}
+
+@media (min-width: 768px) {
+    .navbar-mobile-container {
+        display: none; 
+    }
+    .navbar-container {
+        display: flex;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-container {
+        display: none; 
+    }
+}
